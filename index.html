@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fan On Off</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h1> FAN CONTROLLER</h1>
+      <div class="container-fan">
+        <img src="fanoff.png"  id="fan" class="img-fanoff"> 
+
+        <button type="button" onclick="toggleFan()" class="btn-switch">
+          Switch</button>
+      </div>
+     
+      <script>
+        const fanElement =document.getElementById('fan');
+        let state = false;
+        function toggleFan()
+        {
+            if(state==false)
+            {
+                fanElement.src = 'fanon.gif'  
+                state = true;
+            }
+            else
+            {
+                fanElement.src = 'fanoff.png' 
+                state = false; 
+            }
+        }
+      </script>
+    
+</body>
+</html>
